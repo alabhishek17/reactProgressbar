@@ -1,18 +1,27 @@
-.container{
+/* .container{
 
-}
+} */
 
 .progressbar{
-    border: 2px solid rgb(238, 76, 7);
+    /* border: 2px solid rgb(238, 76, 7); */
     height: 30px;
-    width: 200px;
+    width: 100%;
     border-radius: 10px;
+    background-color: rgb(135, 142, 148);
+    margin-bottom: 10px;
 }
 
 .progressbarfile{
     height: 100%;
     border-radius: 10px;
     background-color: aqua;
-    border: 2px solid rgb(111, 44, 179);
+    /* border: 2px solid rgb(111, 44, 179); */
      transition: width 0.5s ease-out;
 }
+
+.button1:hover{
+    transition: width 0.5s ease-out;
+    background-color: aliceblue;
+    color: black;
+}
+    

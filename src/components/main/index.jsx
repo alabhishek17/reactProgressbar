@@ -7,18 +7,38 @@ function Index() {
     if(progress<100){
         setProgress(progress+20)
     }
+    
+ }
+// if(progress>=100){
+//     setProgress("completed");
+// }
+ const handleRestButton =()=>{
+   
+        setProgress(0)
+    
+ }
+ const groundColor=()=>{
+    if(progress<20){
+        return "#ff0000";
+    }
+    else if(progress<40){
+        return "#ffa500";
+    }
+    else{
+        return "#2ecc71";
+    }
  }
 
     return (
         <div className={style.container}>
 
             <div className={style.progressbar}>
-                <div className={style.progressbarfile}>progress</div>
+                <div className={style.progressbarfile}  style={{width:`${progress}%`,backgroundColor:groundColor()}}>{""}</div>
             </div>
-            <div className={style.progresslabel} style={{width:`${progress}`}}> {" "}% </div>
+            <div> {progress}% </div>
             
-            <button onClick={handleButton}>Progress</button>
-            {/* <button onClick={handleButton}>Reset</button> */}
+            <button className={style.button1} style={{backgroundColor:"black",color:"white",margin:"10px"}} onClick={handleButton}>Progress</button>
+            <button style={{backgroundColor:"black",color:"white"}} onClick={handleRestButton}>Reset</button>
 
 
         </div>
